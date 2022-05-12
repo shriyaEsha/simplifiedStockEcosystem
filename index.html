@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simplified Stock-Ecosystem application</title>
+    <!-- Stock uses React Portals to render React components -->
+    <div id="app-root"></div>
+    <div id="portal-root"></div>
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/javascript" src="http://requirejs.org/docs/release/2.3.2/minified/require.js"></script>
+</head>
+<body>
+    <script>
+        // Stock uses requirejs for functional components 
+        requirejs(["scripts/hello", "scripts/addCompiledUMD"], function(hello, add) {
+            alert('AMD requirejs: ' + hello.helloworld() + add(1,2));
+        });
+    </script>
+    <script src="scripts/main.js"></script>
+    <div id="portal"></div>
+</body>

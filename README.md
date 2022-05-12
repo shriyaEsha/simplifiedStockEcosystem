@@ -1,0 +1,2 @@
+# simplifiedStockEcosystem
+Simplified Stock Ecosystem
